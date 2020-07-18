@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sugaroid</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div class="sugaroid-full">
+      <div class="mx-auto">
+        <div class="sug-status">
+          <span id="sug-stat-icon" style="color: var(--offline)">&#9210; </span><span id="sug-stat">Asleep</span>
+        </div>
+        <div id="sug-header" class="container sug-header">
+          <img class="sug-header-logo" src="/img/sugaroid.png" alt="Sugaroid">
+        </div>
+        <div id="s-con" class="container sugaroid-chat-main-box">
+
+        </div>
+        <div class="conainer sug-footer mx-auto">
+          <form class="sug-form" onsubmit="sendReplyToSugaroidBot(); return false;">
+            <div class="field is-grouped">
+              <div class="control sug-msgbox">
+                <input id="sug-msgbox-input" class="input is-rounded" type="text" placeholder="Your message...">
+              </div>
+              <div class="control">
+                <button id="sugaroidSendButton" class="button is-link is-rounded">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <!-- Load Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/src/core.js"></script>
+    <script src="https://kit.fontawesome.com/52ec62d041.js" crossorigin="anonymous" async></script>
+
+  </body>
+</html>

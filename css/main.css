@@ -1,0 +1,107 @@
+:root {
+  --bg-color: #eeeeee;
+  --accent: #ff0077;
+  --f-accent: #fff;
+  --secondary: #dddddd;
+  --f-secondary: #000;
+  --curve: 1em;
+  --online: rgb(0, 255, 64);
+  --offline: rgb(228, 53, 0);
+}
+
+.mx-auto {
+  margin: auto;
+}
+
+.sug-status {
+  position: fixed;
+  z-index: 1000;
+  background-color: var(--secondary);
+  border-radius: 1em;
+  min-height: 1em;
+  max-width: 200px;
+  top: calc(15vh + 0.1em);
+  text-align: center;
+  left: calc(50% - 100px);
+  right: calc(50% - 100px);
+  justify-content: center;
+  padding: 0.2em;
+}
+
+.sug-msgbox {
+  width: calc(100% - 6em);
+}
+
+.sug-form {
+  margin: auto;
+}
+
+.sug-header {
+  margin-top: 1em;
+  height: calc(15vh - 1em);
+  max-width: 800px;
+  background-color: var(--secondary);
+  border-radius: var(--curve) var(--curve) 0 0;
+}
+
+.sug-header-logo {
+  height: calc(15vh - 1em);
+  margin: auto;
+  padding: 1em;
+  display: block;
+}
+
+.sug-footer {
+  max-width: 800px;
+  margin-bottom: auto;
+  padding: 1em;
+  background-color: var(--secondary);
+  border-radius: 0 0 var(--curve) var(--curve);
+
+}
+
+.sugaroid-chat-main-box {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-width: thin;
+  height: calc(80vh - 2em);
+  padding: 1em;
+  max-width: 800px;
+  position: relative;
+  background-color: var(--bg-color);
+}
+
+.sugaroid-msg {
+  display: table;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+
+.sug-left {
+  margin-left: auto;
+  transform-origin: right top;
+}
+.sug-right {
+  margin-right: auto;
+  transform-origin: left bottom;
+}
+
+.sugaroid-message {
+  max-width: 600px;
+  display: inline-block;
+  padding: 0.75rem;
+  margin-bottom: 0.75em;
+  border-radius: 1em;
+}
+
+.sugaroid-message-alice {
+  background-color: var(--accent);
+  color: var(--f-accent);
+  text-align: right;
+}
+
+.sugaroid-message-bob {
+  background-color: var(--secondary);
+  color: var(--f-secondary);
+  text-align: left;
+}
