@@ -37,6 +37,14 @@ function fmtImgSrc(emote) {
     return IconsURL + emotionMapping[emote] + png;
 };
 
+
+function pingFailedCallBack() {
+    $('#sug-stat-icon').css('color', 'var(--warn)');
+    $('#sug-stat').html('Wake request failed. <a href="">Refresh?</a>');
+    $('.sug-header-logo').prop('src', fmtImgSrc(15))
+};
+
+
 function pingServer() {
     console.log("Asking server to wake up. Please!");
     $.get(`${BaseURL}/wake`, function( data ) {
