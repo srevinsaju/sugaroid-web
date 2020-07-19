@@ -61,6 +61,8 @@ function pingServer() {
 function updateInterfaceSugaroidMessageCallback(data, status) {
     console.log(`Received data from server with Status: ${status}`);
     let sugaroidMessage = data['message'];
+    let emote = data['emotion'] ? data['emotion'] : 0;
+    $('.sug-header-logo').prop('src', fmtImgSrc(emote));
     appendChatReply(getFormattedSugaroidMessageHTML(sugaroidMessage));
     globalVarSugaroid = data['data'];
     scrollToBottom();
