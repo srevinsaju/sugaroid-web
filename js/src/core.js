@@ -1,6 +1,10 @@
 var globalVarSugaroid = "NULL";
 const BaseURL = "https://api-sugaroid.herokuapp.com";
-const BaseBackendURL = `${BaseURL}/chatbot`
+const BaseBackendURL = `${BaseURL}/chatbot`;
+const IconsURL = "https://raw.githubusercontent.com/srevinsaju/sugaroid/master/sugaroid/gui/ui/";
+const thinkingGIF = "/img/sugaroid_thinking3.gif"
+const png = ".png";
+
 const emotionMapping = {
     70: "sugaroid_genie",
     0:  "sugaroid",
