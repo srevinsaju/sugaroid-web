@@ -56,13 +56,13 @@ function updateInterfaceSugaroidMessageCallback(data, status) {
 function clearUserInput() {
     /* Clears the user input field */
     $('#sug-msgbox-input').val('');
-}
+};
 
 
 function scrollToBottom() {
     /* Scrolls to the bottom */
     $("#s-con").animate({ scrollTop: $('#s-con').prop("scrollHeight")}, 500);
-}
+};
 
 
 function sendReplyToSugaroidBot() {
@@ -81,7 +81,7 @@ function sendReplyToSugaroidBot() {
     $.post(BaseBackendURL + "?usermsg=" + encodeURI(response), globalVarSugaroid, updateInterfaceSugaroidMessageCallback);
     console.log("Sent request.")
     return false;
-}
+};
 
 
 function getFormattedUserMessageHTML(message) {
@@ -104,7 +104,7 @@ function appendChatReply(htmlMessage) {
     $('#s-con').append(htmlMessage);
     $('.sugaroid-msg:last-child').css('transform');
     $('.sugaroid-msg:last-child').css('transform', 'scale(1)');
-}
+};
 
 
 pingServer();
