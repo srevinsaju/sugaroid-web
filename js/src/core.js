@@ -33,6 +33,9 @@ const emotionMapping = {
     57: "sugaroid_sleep"
 }
 
+function fmtImgSrc(emote) {
+    return IconsURL + emotionMapping[emote] + png;
+};
 
 function pingServer() {
     console.log("Asking server to wake up. Please!");
