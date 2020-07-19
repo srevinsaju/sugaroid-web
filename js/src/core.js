@@ -47,13 +47,15 @@ function pingFailedCallBack() {
 
 function pingServer() {
     console.log("Asking server to wake up. Please!");
-    $.get(`${BaseURL}/wake`, function( data ) {
+    var request = $.get(`${BaseURL}/wake`, function( data ) {
         if (data) {
             $('#sug-stat-icon').css('color', 'var(--online)');
-            $('#sug-stat').text('Online')
+            $('#sug-stat').html('Online');
+            $('.sug-header-logo').prop('src', fmtImgSrc(0))
         }
-    })
-}
+    });
+    request.fail(pingFailedCallBack);
+};
 
 
 function updateInterfaceSugaroidMessageCallback(data, status) {
