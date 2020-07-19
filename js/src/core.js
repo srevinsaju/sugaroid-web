@@ -77,6 +77,7 @@ function sendReplyToSugaroidBot() {
         // for processing.
         return false;
     }
+    $('.sug-header-logo').prop('src', thinkingGIF);
     $('#sugaroidSendButton').addClass("is-loading");
     $('#sug-stat').text("Thinking...");
     clearUserInput();
